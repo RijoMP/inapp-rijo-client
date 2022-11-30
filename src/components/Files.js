@@ -12,7 +12,7 @@ export default function Files() {
   useEffect(() => {
     const getVideos= async () => {
       const response = await axios.get('http://localhost:5000/file')
-      const vdoData = response.data;
+      const vdoData = response.data.data.videos;
       setVideos(vdoData)
     } 
 
